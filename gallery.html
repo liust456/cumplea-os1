@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Para Ti 💞</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/css/gallery.css" />
+</head>
+<body>
+
+  <body>
+  <audio id="music" src="src/music/TINI - Carne y Hueso (Video Oficial).mp3"  loop></audio>
+  <!-- BOTÓN DE CONTROL -->
+  <button id="musicBtn" class="music-control" type="button" onclick="toggleMusic()">
+     ▶
+  </button>
+    <script>
+       const music = document.getElementById("music");
+       const btn = document.getElementById("musicBtn");
+
+       function toggleMusic() {
+         if (music.paused) {
+           music.play().then(() => {
+             btn.textContent = "⏸";
+            }).catch(() => {});
+        } else {
+          music.pause();
+          btn.textContent = "▶";
+        }
+    }
+</script>
+  <div class="gallery-wrapper">
+    <div class="gallery-card">
+      <h1>🌻 Para Ti 🌻</h1>
+      <p class="subtitle">
+        Cada imagen guarda un pedacito de cariño 💖
+      </p>
+
+    <div class="gallery">
+      <img src="src/images/foto1.jpeg" alt="Momento 1">
+      <img src="src/images/foto2.jpeg" alt="Momento 2">
+      <img src="src/images/foto3.jpeg" alt="Momento 3">
+      <img src="src/images/foto4.jpeg" alt="Momento 4">
+      <img src="src/images/foto5.jpeg" alt="Momento 5">
+      <img src="src/images/foto6.jpeg" alt="Momento 6">
+      <img src="src/images/foto7.jpeg" alt="Momento 7">
+    </div>
+
+    <p class="final-text">
+       Bueno un pedacito del tiempo que recien nos estamos conociendo  💞 
+    </p>
+    </div>
+  </div>
+  <script src="src/js/gallery.js"></script>
+</body>
+</html>
